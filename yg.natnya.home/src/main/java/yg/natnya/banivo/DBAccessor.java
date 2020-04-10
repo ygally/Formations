@@ -12,11 +12,12 @@ import org.apache.http.protocol.*;
 import org.apache.http.util.EntityUtils;
 import yg.natnya.honivo.Home;
 import yg.natnya.honivo.Homes;
+import yg.natnya.honivo.Interface;
 
 import java.io.IOException;
 import java.net.Socket;
 
-public class DBAccessor {
+public class DBAccessor implements Interface {
     public static final RequestUserAgent USER_AGENT = new RequestUserAgent("HomeHC/1.1");
     private static final ConnectionReuseStrategy CONN_STRATEGY = DefaultConnectionReuseStrategy.INSTANCE;
     public static final Gson GSON = new Gson();
@@ -48,10 +49,9 @@ public class DBAccessor {
                 .getHomes()[index];
     }
 
-    private String getStringFromPath(String path) throws IOException, HttpException {
+    private String getStringFromPath(final String path) throws IOException, HttpException {
         HttpCoreContext coreContext = HttpCoreContext.create();
         coreContext.setTargetHost(host);
-        String strResponse = "";
         try {
             if (!conn.isOpen()) {
                 Socket socket = new Socket(host.getHostName(), host.getPort());
@@ -62,11 +62,9 @@ public class DBAccessor {
             httpexecutor.preProcess(request, httpproc, coreContext);
             HttpResponse response = httpexecutor.execute(request, conn, coreContext);
             httpexecutor.postProcess(response, httpproc, coreContext);
-            strResponse = EntityUtils.toString(response.getEntity());
-            conn.close();
+            return EntityUtils.toString(response.getEntity());
         } finally {
             conn.close();
         }
-        return strResponse;
     }
 }
