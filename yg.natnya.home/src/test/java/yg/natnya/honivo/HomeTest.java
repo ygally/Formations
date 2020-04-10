@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 import static org.junit.Assert.*;
 
 public class HomeTest {
-    public static final String JSON_HOMES = "{homes:{[{nbFloors:2,surface:50},{nbFloors:4,surface:40}]}}";
+    public static final String JSON_HOMES = "{homes:[{nbFloors:2,surface:50},{nbFloors:4,surface:40}]}";
 
     @org.junit.Test
     public void getHomes() {
