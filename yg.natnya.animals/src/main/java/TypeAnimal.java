@@ -1,4 +1,0 @@
-enum TypeAnimal {
-    CHIEN,
-    OISEAU
-}

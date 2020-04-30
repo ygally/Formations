@@ -2,7 +2,7 @@ class Chien extends Animal {
     int nbPattes;
     int size;
     Chien(int size) {
-        super(TypeAnimal.CHIEN);
+        super();
         this.nbPattes = 4;
         this.size = size;
     }

@@ -2,7 +2,7 @@ class Oiseau extends Animal {
     int nbAiles;
     int size;
     Oiseau(int size) {
-        super(TypeAnimal.OISEAU);
+        super();
         this.nbAiles = 2;
         this.size = size;
     }
