@@ -3,7 +3,7 @@ public class OiseauCrieur extends Oiseau implements AnimalCrieur {
         super(size);
     }
 
-    public void crie() {
-        System.out.println(this.toString() + " : cui cui cui!!!");
+    public String crie() {
+        return "cui cui cui!!!";
     }
 }

@@ -3,7 +3,7 @@ class ChienCrieur extends Chien implements AnimalCrieur{
         super(size);
     }
 
-    public void crie() {
-        System.out.println(this.toString() + " : baw baw baw!!");
+    public String crie() {
+        return "baw baw baw!!";
     }
 }

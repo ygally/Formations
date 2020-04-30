@@ -1,3 +1,3 @@
 interface AnimalCrieur {
-    void crie();
+    String crie();
 }

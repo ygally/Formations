@@ -4,7 +4,7 @@ import java.util.List;
 public class Animalerie {
     static List<AnimalCrieur> ANIMALS;
     static{
-        ANIMALS = new ArrayList<AnimalCrieur>(4);
+        ANIMALS = new ArrayList<>(4);
         ANIMALS.add(new ChienCrieur(40));
         ANIMALS.add(new ChienCrieur(25));
         ANIMALS.add(new ChienCrieur(30));
@@ -12,6 +12,6 @@ public class Animalerie {
         ANIMALS.add(new OiseauCrieur(10));
     }
     public static void main(String[] args) {
-        new Dresseur().faitCrier(ANIMALS);
+        new Dresseur().faitCrier(ANIMALS, System.out);
     }
 }

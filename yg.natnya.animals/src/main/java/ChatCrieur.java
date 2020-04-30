@@ -3,7 +3,7 @@ public class ChatCrieur extends Chat implements AnimalCrieur{
         super(size);
     }
 
-    public void crie() {
-        System.out.println(this.toString() + " : miaaaaaaaouh!");
+    public String crie() {
+        return "miaaaaaaaouh!";
     }
 }
