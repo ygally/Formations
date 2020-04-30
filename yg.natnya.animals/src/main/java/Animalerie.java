@@ -8,7 +8,6 @@ public class Animalerie {
         ANIMALS.add(new Chien(40));
         ANIMALS.add(new Chien(25));
         ANIMALS.add(new Chien(30));
-        ANIMALS.add(new Chat(30));
         ANIMALS.add(new Oiseau(10));
     }
     public static void main(String[] args) {
