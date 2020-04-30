@@ -1,4 +1,5 @@
 enum TypeAnimal {
     CHIEN,
-    OISEAU
+    OISEAU,
+    CHAT
 }

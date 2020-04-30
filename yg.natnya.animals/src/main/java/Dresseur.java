@@ -11,6 +11,9 @@ class Dresseur {
                 case OISEAU:
                     new ActionOiseau().piaille((Oiseau)animal);
                     break;
+                case CHAT:
+                    new ActionChat().miaule((Chat)animal);
+                    break;
             }
         }
     }
