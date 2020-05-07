@@ -1,17 +1,13 @@
 /**
- * 2 raisons de changer cette classe :
- * - format d'affichage de la lettre du père noël
- * - format de traitement des prix pour la facturation
+ * 1 raison de changer cette classe :
+ * - stockage/maniement/lecture de la valeur numérique du prix en euros.
  */
 public class Gift {
-    static float getNumericPriceFrom(Gift gift) {
-        return Float.parseFloat(gift.getPrice().replace(" €", ""));
-    }
     private float price;
     public Gift(float price) {
         this.price = price;
     }
-    public String getPrice() {
-        return price+" €";
+    public float getEuroPrice() {
+        return price;
     }
 }

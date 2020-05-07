@@ -2,9 +2,9 @@
  * Dans la lettre du père noël les prix sont en Euros (avec le signe €)
  */
 public class SantaClass {
-    static Gift[] GIFTS = new Gift[]{
-            new Gift(3.25f),
-            new Gift(700.99f)
+    static GiftPrintable[] GIFTS = new GiftPrintable[]{
+            new GiftPrintable(new Gift(3.25f)),
+            new GiftPrintable(new Gift(700.99f))
     };
     public static void main(String[] args) {
         System.out.println("Cher Parents!");

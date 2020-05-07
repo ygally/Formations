@@ -9,9 +9,7 @@ public class SantaWife {
 
     public static void main(String[] args) {
         System.out.println("=== Facture ===");
-        float price1 = Gift.getNumericPriceFrom(GIFTS[0]);
-        float price2 = Gift.getNumericPriceFrom(GIFTS[1]);
-        System.out.println("Le total numérique " + (price1+price2));
+        System.out.println("Le total numérique " + (GIFTS[0].getEuroPrice()+GIFTS[1].getEuroPrice()));
         System.out.println("Falbala.");
     }
 
