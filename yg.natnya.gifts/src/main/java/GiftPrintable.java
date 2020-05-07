@@ -8,6 +8,6 @@ public class GiftPrintable {
         this.gift = gift;
     }
     public String getPrice() {
-        return gift.getEuroPrice() + " €";
+        return gift.getEuroPrice() + " EUR";
     }
 }
