@@ -1,3 +1,4 @@
 # Project exclude paths
-/yg.natnya.home/target/
 /.idea/
+/**/target/
+/**/*.iml
