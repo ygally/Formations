@@ -4,14 +4,17 @@
  * - format de traitement des prix pour la facturation
  */
 public class Gift {
-    static float getNumericPriceFrom(Gift gift) {
-        return Float.parseFloat(gift.getPrice().replace(" €", ""));
-    }
     private float price;
+
     public Gift(float price) {
         this.price = price;
     }
+
+    static float getNumericPriceFrom(Gift gift) {
+        return Float.parseFloat(gift.getPrice().replace(" €", ""));
+    }
+
     public String getPrice() {
-        return price+" €";
+        return price + " EUR";
     }
 }
