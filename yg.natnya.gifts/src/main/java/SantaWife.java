@@ -1,3 +1,6 @@
+/**
+ * Dans la facture éditée par la comptable (la femme du père noël) les prix sont en nombre flottant.
+ */
 public class SantaWife {
     static Gift[] GIFTS = new Gift[]{
             new Gift(3.25f),
