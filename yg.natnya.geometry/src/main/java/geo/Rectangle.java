@@ -1,5 +1,7 @@
 package geo;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class Rectangle extends Shape {
     private int width;
     private int height;
@@ -28,5 +30,14 @@ public class Rectangle extends Shape {
     public void reduction(int ratio) {
         setWidth(width / ratio);
         setHeight(height / ratio);
+    }
+    public String draw() {
+        final StringBuilder sb = new StringBuilder();
+        sb.append("+----------+\n");
+        sb.append("| ");
+        sb.append(StringUtils.rightPad(String.valueOf(getArea()), 9, " "));
+        sb.append("|\n");
+        sb.append("+----------+");
+        return sb.toString();
     }
 }
