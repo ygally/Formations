@@ -21,16 +21,23 @@ public class Square extends Shape {
         side /= ratio;
     }
 
+    public void rotate() {
+        // turn right 90 does not do anything
+    }
+
     public int getSide() {
         return side;
     }
 
     public String draw() {
         final StringBuilder sb = new StringBuilder();
+        sb.append("  ");
+        sb.append(side);
+        sb.append("\n");
         sb.append("+----------+\n");
         sb.append("|          |\n");
-        sb.append("| ");
-        sb.append(StringUtils.rightPad(String.valueOf(getArea()), 9, " "));
+        sb.append("|   ");
+        sb.append(StringUtils.rightPad(String.valueOf(getArea()), 7, " "));
         sb.append("|\n");
         sb.append("|          |\n");
         sb.append("+----------+");
