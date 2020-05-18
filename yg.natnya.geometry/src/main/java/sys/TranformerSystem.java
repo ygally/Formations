@@ -1,9 +1,6 @@
 package sys;
 
-import geo.Circle;
-import geo.Client;
-import geo.Shape;
-import geo.Square;
+import geo.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +15,18 @@ public class TranformerSystem {
         shapes.add(new Square(10));
         shapes.add(new Circle(12));
         drawer.draw(shapes);
-        System.out.println("ROTATE 90 + REDUCTION BY 2");
-        for (Shape shape:
-             shapes) {
-            shape.rotate();
-            shape.reduction(2);
-        }
+        new TranformerSystem().twistedHomothetyOf(shapes);
         drawer.draw(shapes);
+    }
+
+    public void twistedHomothetyOf(List<Shape> shapes) {
+        System.out.println("ROTATE 90 + REDUCTION BY 2");
+        for (Shape shape : shapes) {
+            if (shape instanceof TransformableShape) {
+                TransformableShape transformable = ((TransformableShape) shape);
+                transformable.rotateRight90();
+                transformable.reduceBy(2);
+            }
+        }
     }
 }

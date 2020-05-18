@@ -6,11 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DrawerSystem {
-    public void draw(List<Shape> shapes) {
-        for (Shape shape : shapes) {
-            System.out.println("Drawing a shape :\n"+shape.draw());
-        }
-    }
     public static void main(String[] args) {
         Client client = new Client();
         List<Shape> shapes = new ArrayList<Shape>(4);
@@ -19,5 +14,13 @@ public class DrawerSystem {
         shapes.add(new Circle(5));
         shapes.add(new Square(6));
         new DrawerSystem().draw(shapes);
+    }
+
+    public void draw(List<Shape> shapes) {
+        for (Shape shape : shapes) {
+            if (shape instanceof DrawableShape) {
+                System.out.println("Drawing a shape :\n" + ((DrawableShape) shape).draw());
+            }
+        }
     }
 }

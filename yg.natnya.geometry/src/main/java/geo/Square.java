@@ -2,7 +2,7 @@ package geo;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class Square extends Shape {
+public class Square extends Shape implements TransformableShape, DrawableShape {
     public int side;
 
     public Square(int side) {
@@ -17,11 +17,11 @@ public class Square extends Shape {
         return 4 * side;
     }
 
-    public void reduction(int ratio) {
+    public void reduceBy(int ratio) {
         side /= ratio;
     }
 
-    public void rotate() {
+    public void rotateRight90() {
         // turn right 90 does not do anything
     }
 
