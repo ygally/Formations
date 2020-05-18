@@ -7,4 +7,9 @@ public class Client {
         rectangle.setHeight(height);
         return rectangle;
     }
+    public Rectangle createSquare(int side) {
+        Square square = new Square();
+        square.setWidth(side);
+        return square;
+    }
 }
